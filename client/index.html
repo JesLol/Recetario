@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetario</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="js/recetas.js"></script>
+    <script src="js/index-login-btn.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/"><p>Recetario</p></a>
-            <ul>
+    <header class="header-header">
+        <nav class="nav-header">
+            <a href="/" class="title-a-header"><p class="title-p-header">Recetario Jesus</p></a>
+            <ul class="ul-header">
                 <li>
+                    <button id="login-btn" class="btn-header"><span class="material-symbols-outlined">person</span></button>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="recetas-main">
         <section class="title-section">
-            <h1>Recetas</h1>
+            <h1 class="recetas-h1">Recetas</h1>
         </section>
         <section class="recetas-section">
             <div id="recetas-container-div">
@@ -27,5 +30,8 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        © Jesus Cuapio - 2024
+    </footer>
 </body>
 </html>
