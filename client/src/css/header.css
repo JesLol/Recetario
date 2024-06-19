@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap');
+
+.header-header{
+    height: 50px;
+    width: 100vw;
+    background-color: var(--header-bg-color);
+}
+
+.nav-header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-a-header{
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.title-p-header{
+    font-family: "Playwrite AU VIC", cursive;
+    color: #000000;
+    font-weight: 900;
+}
+
+.ul-header{
+    margin: 0 20px;
+}
+
+.ul-header > li{
+    list-style: none;
+}
+
+.btn-header{
+    background: #00000000;
+    border: none;
+    cursor: pointer;
+}

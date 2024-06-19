@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("general.css");
+@import url("root.css");
+@import url("header.css");
+@import url("footer.css");
+
+body{
+    background: var(--body-bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-main{
+    display: flex;
+    justify-content: center;
+}
+
+.login-main-section{
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--header-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.login-h1{
+    font-family: "Ubuntu", sans-serif;
+    margin-bottom: 10px;
+}
+
+.login-form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px
+}
+
+.login-form-label-p{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.login-form-input{
+    margin-top: 5px;
+    border: none;
+    background: #00000000;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+}
+
+.login-form-submit-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.login-form-submit-btn{
+    background: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 14px;
+    transition: 300ms ease all;
+}
+
+.login-form-submit-btn:focus{
+    transform: scale(0.9);
+}

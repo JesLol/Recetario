@@ -1,0 +1,11 @@
+@import url("general.css");
+
+.footer{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px -2px 5px #00000080;
+}
