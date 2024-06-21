@@ -4,6 +4,7 @@ import { createClient } from "@libsql/client";
 import { createServer } from "node:http";
 import { methods as recetas} from "./controllers/recetas.mjs";
 import { methods as login } from "./controllers/auth.controller.mjs";
+import { middlewares as authorization, middlewares } from "./middlewares/authorization.mjs";
 
 const port = process.env.PORT ?? 3000;
 dotenv.config();
@@ -40,6 +41,7 @@ app.use((req,res,next)=>{
 
 app.get('/', (req, res)=>res.sendFile(process.cwd()+"/client/index.html"));
 app.get('/login', (req, res)=>res.sendFile(process.cwd()+"/client/login/index.html"));
+app.get('/agregar-recetas', middlewares.loggedIn, (req, res)=>res.sendFile(process.cwd()+"/client/agregar-recetas/index.html"));
 app.get('/api/recetas', recetas.enviarRecetas);
 app.post('/api/login', login.login);
 
