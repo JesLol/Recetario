@@ -4,6 +4,13 @@
 @import url("header.css");
 @import url("footer.css");
 
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
 .agg-recetas-main{
     margin: 20px;
     display: grid;
@@ -21,6 +28,7 @@
 }
 
 .agregar-receta-form{
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
@@ -79,6 +87,29 @@
     transform: scale(0.95);
 }
 
+.ingredientes-ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+}
+
+.ingredientes-li-label{
+    position: relative;
+}
+
+.ingrediente-delete-btn{
+    position: absolute;
+    right: 0;
+    border: none;
+    background: #00000000;
+    cursor: pointer;
+}
+
+.ingrediente-delete-btn-icon{
+    font-size: 1.2rem;
+    color: #ff0000;
+}
+
 /* Preparacion */
 
 .preparacion-div-container{
@@ -113,6 +144,34 @@
     transform: scale(0.9);
 }
 
+.preparacion-ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+    width: 100%;
+    margin: 15px 0 0 0 ;
+}
+
+.preparacion-li{
+    width: 100%;
+    list-style: none;
+}
+
+.preparacion-li-label{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.preparacion-textarea{
+    width: 100%;
+    resize: none;
+    height: 3rem;
+    width: 80%;
+    max-width: 500px;
+}
+
 .submit-btn-container{
     display: flex;
     justify-content: center;
@@ -130,9 +189,4 @@
 
 .submit-btn:hover{
     transform: scale(0.9);
-}
-
-.footer{
-    position: absolute;
-    bottom: 0;
 }

@@ -24,17 +24,17 @@
             <h1 class="agregar-recetas-h1">Agregar una receta</h1>
         </section>
         <section class="agg-recetas-section">
-            <form class="agregar-receta-form">
+            <form class="agregar-receta-form" id="agg-receta-form">
                 <label for="receta-nombre" class="nombre-receta-label">
                     <h2 class="nombre-receta-h2">Nombre de la receta: </h2>
-                    <input type="text" id="receta-nombre" class="nombre-receta-input"><!-- Maximo 80 char -->
+                    <input type="text" id="recetaNombre" class="nombre-receta-input" name="recetaNombre" autocomplete="off"><!-- Maximo 80 char -->
                 </label>
                 <div class="ingredientes-div-container">
                     <h3 class="ingredientes-h3">Ingredientes: </h3>
-                    <ul id="ingredientes-ul">
-                        <li>
-                            <label for="ingrediente-1">
-                                <input type="text" id="ingrediente-1" class="ingredientes-input">
+                    <ul id="ingredientes-ul" class="ingredientes-ul">
+                        <li class="ingredientes-li">
+                            <label for="ingrediente1" class="ingredientes-li-label">
+                                <input type="text" id="ingrediente1" class="ingredientes-input" name="ingredientes" autocomplete="off">
                             </label>
                         </li>
                     </ul>
@@ -44,9 +44,15 @@
                 </div>
                 <div class="preparacion-div-container">
                     <h3 class="preparacion-h3">Preparacion: </h3>
-                    <div class="preparacion-container" id="preparacion-container">
-                        <button class="preparacion-tipo-btn" id="preparacion-btn-tipo-lista">Lista</button>
-                        <button class="preparacion-tipo-btn" id="preparacion-btn-tipo-texto">Texto</button>
+                    <ul id="preparacion-ul" class="preparacion-ul">
+                        <li class="preparacion-li">
+                            <label for="preparacion1" class="preparacion-li-label">
+                                <textarea type="text" id="preparacion1" class="preparacion-textarea" name="pasos" autocomplete="off"></textarea>
+                            </label>
+                        </li>
+                    </ul>
+                    <div>
+                        <button class="agregar-ingrediente-btn" id="agregar-paso-btn">Agregar Paso</button>
                     </div>
                 </div>
                 <div class="submit-btn-container">
