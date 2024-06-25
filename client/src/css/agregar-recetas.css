@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("general.css");
+@import url("root.css");
+@import url("header.css");
+@import url("footer.css");
+
+.agg-recetas-main{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.agregar-recetas-h1{
+    font-family: "Ubuntu", sans-serif;
+}
+
+.agg-recetas-section{
+    display: flex;
+    justify-content: center;
+}
+
+.agregar-receta-form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    background: var(--header-bg-color);
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.nombre-receta-label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombre-receta-h2{
+    color: #ffffff;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.nombre-receta-input{
+    outline: none;
+}
+
+/* Ingredientes */
+
+.ingredientes-div-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ingredientes-h3{
+    color: #ffffff;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.ingredientes-input{
+    outline: none;
+}
+
+.agregar-ingrediente-btn{
+    background: #ffffff;
+    margin: 10px 0;
+    border: 1px solid var(--header-bg-color);
+    padding: 4px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 300ms ease all;
+}
+
+.agregar-ingrediente-btn:hover{
+    transform: scale(0.95);
+}
+
+/* Preparacion */
+
+.preparacion-div-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preparacion-h3{
+    color: #ffffff;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.15rem;
+}
+
+.preparacion-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.preparacion-tipo-btn{
+    background: #ffffff;
+    margin: 10px 0;
+    border: 1px solid var(--header-bg-color);
+    padding: 7px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 300ms ease all;
+}
+
+.preparacion-tipo-btn:hover{
+    transform: scale(0.9);
+}
+
+.submit-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn{
+    background: #ffffff;
+    margin: 10px 0;
+    border: 1px solid var(--header-bg-color);
+    padding: 7px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 300ms ease all;
+}
+
+.submit-btn:hover{
+    transform: scale(0.9);
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+}
