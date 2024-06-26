@@ -1,17 +1,12 @@
 import express from "express";
-import dotenv from "dotenv";
-import { createClient } from "@libsql/client";
 import { createServer } from "node:http";
 import { methods as recetas} from "./controllers/recetas.mjs";
 import { methods as login } from "./controllers/auth.controller.mjs";
 import { middlewares as authorization, middlewares } from "./middlewares/authorization.mjs";
+import { dbConn as db } from "./services/db.mjs";
+import { methods as insertarReceta } from "./controllers/insertar-receta.controller.mjs";
 
 const port = process.env.PORT ?? 3000;
-dotenv.config();
-const db = createClient({
-    url: "libsql://recetario-jeslol231.turso.io",
-    authToken: process.env.DB_TOKEN
-});
 
 await db.execute(`
     CREATE TABLE IF NOT EXISTS recetas (
@@ -44,6 +39,7 @@ app.get('/login', (req, res)=>res.sendFile(process.cwd()+"/client/login/index.ht
 app.get('/agregar-recetas', middlewares.loggedIn, (req, res)=>res.sendFile(process.cwd()+"/client/agregar-recetas/index.html"));
 app.get('/api/recetas', recetas.enviarRecetas);
 app.post('/api/login', login.login);
+app.post('/api/agregar-receta', insertarReceta.insertarReceta)
 
 server.listen(port, ()=>{
     console.log(`Servidor escuchando en el puerto ${port}`)
