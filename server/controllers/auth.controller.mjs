@@ -1,15 +1,11 @@
-import { createClient } from "@libsql/client";
 import jsonwebtoken from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import validator from "validator";
 import { json } from "express";
+import { dbConn as db } from '../services/db.mjs';
 
 dotenv.config();
 
-const db = createClient({
-    url: 'libsql://recetario-jeslol231.turso.io',
-    authToken: process.env.DB_TOKEN
-});
 //Iniciar sesion
 async function login(req, res){
     console.log("Login req body: "+req.body);
