@@ -1,5 +1,4 @@
 import jsonwebtoken from "jsonwebtoken";
-import dotenv from "dotenv";
 import { dbConn as db } from "../services/db.mjs";
 
 async function loggedIn(req, res, next){
