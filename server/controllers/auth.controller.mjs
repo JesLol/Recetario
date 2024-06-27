@@ -1,7 +1,6 @@
 import jsonwebtoken from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import validator from "validator";
-import { json } from "express";
 import { dbConn as db } from '../services/db.mjs';
 
 dotenv.config();
