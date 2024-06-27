@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     fetch('api/recetas')
     .then(response => response.json())
     .then(data=>{
-        recetas = "<ul>";
+        recetas = `<ul class="recetas-ul">`;
         data.forEach(receta => {
             recetas += `<li class="receta-li"><button id="${receta.nombre}" class="li-receta-btn"><p class="receta-nombre">${receta.nombre}</p></button></li>`;
         });

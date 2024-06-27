@@ -45,6 +45,12 @@ body{
     margin-top:20px
 }
 
+.recetas-ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
 .receta-li{
     list-style: none;
     border: 1px solid #000000;
