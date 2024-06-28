@@ -29,7 +29,8 @@ body{
 }
 
 .article-container{
-    margin: 10px 0;
+    margin: 10px;
+    font-family: "Ubuntu", sans-serif;
 }
 
 .receta-ingredientes-h2{
