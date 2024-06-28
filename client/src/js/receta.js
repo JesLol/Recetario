@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", async ()=>{
+    document.getElementById("home-btn").addEventListener("click",()=>{
+        window.location.href = "/";
+    })
+    //Consigue el nombre de la receta a buscar para perdirle los datos a la api
     const recetaNombre = localStorage.getItem("recetaGet");
     console.log(recetaNombre)
     const res = await fetch('/api/receta', {
@@ -27,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async ()=>{
     const ingredientesContainer = document.getElementById("ingredientes-container");
     let ingredientesHtml = `<ul>`
     JSON.parse(resJson.ingredientes).forEach(ingrediente => {
-        ingredientesHtml += `<li>${ingrediente}</li>`
+        ingredientesHtml += `<li class="receta-ingrediente-li">${ingrediente}</li>`
     });
     ingredientesHtml += `</ul>`
     ingredientesContainer.innerHTML = ingredientesHtml
